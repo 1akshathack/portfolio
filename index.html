@@ -1,112 +1,361 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Description" content="Portfolio of Akshatha Chandra Kumar, Business Intelligence Engineer specializing in analytics, data modeling, forecasting, and executive reporting.">
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
-    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    li.li4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    span.s1 {text-decoration: underline ; font-kerning: none}
-    span.s2 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none}
-    span.s4 {-webkit-text-stroke: 0px #000000}
-    span.s5 {font: 12.0px '.Times Fallback'; font-kerning: none}
-    span.s6 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #0000e9}
-    ul.ul1 {list-style-type: disc}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Akshatha Chandra Kumar, Business Intelligence Engineer specializing in analytics, data modeling, forecasting, and executive reporting." />
+  <title>Akshatha Chandra Kumar | Business Intelligence Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --ink: #13231d;
+  --text: #43534c;
+  --muted: #eef3f0;
+  --line: #dce5e0;
+  --accent: #1e7254;
+  --accent-dark: #14523d;
+  --white: #ffffff;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: #fbfdfc;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(251, 253, 252, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(220, 229, 224, 0.8);
+}
+.nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; }
+.brand {
+  width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+  background: var(--ink); color: white; font-family: "Manrope", sans-serif; font-weight: 800;
+}
+nav { display: flex; gap: 28px; font-size: 0.95rem; font-weight: 600; }
+nav a:hover { color: var(--accent); }
+.hero { min-height: 760px; display: grid; grid-template-columns: 1.45fr 0.7fr; align-items: center; gap: 80px; padding: 90px 0; }
+.eyebrow { margin: 0 0 14px; color: var(--accent); font-size: 0.78rem; letter-spacing: 0.16em; font-weight: 800; }
+h1, h2, h3 { font-family: "Manrope", sans-serif; line-height: 1.18; margin-top: 0; }
+h1 { font-size: clamp(2.8rem, 6vw, 5.5rem); letter-spacing: -0.055em; margin-bottom: 24px; max-width: 900px; }
+h2 { font-size: clamp(2rem, 4vw, 3.45rem); letter-spacing: -0.045em; }
+h3 { font-size: 1.3rem; letter-spacing: -0.025em; }
+.hero-text { font-size: 1.15rem; color: var(--text); max-width: 760px; }
+.hero-actions, .contact-actions { display: flex; gap: 12px; margin: 32px 0; flex-wrap: wrap; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 10px; font-weight: 700; border: 1px solid var(--line); transition: .2s ease; }
+.button.primary { color: white; background: var(--accent); border-color: var(--accent); }
+.button.primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.button.secondary { background: white; }
+.button.secondary:hover { border-color: var(--accent); color: var(--accent); }
+.quick-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-top: 30px; border-top: 1px solid var(--line); }
+.quick-facts strong, .quick-facts span { display: block; }
+.quick-facts strong { font-family: "Manrope", sans-serif; font-size: 1.25rem; }
+.quick-facts span { color: var(--text); font-size: 0.88rem; }
+.hero-card { background: var(--ink); color: white; border-radius: 28px; padding: 34px; box-shadow: 0 24px 60px rgba(19,35,29,.18); }
+.avatar { width: 86px; height: 86px; border-radius: 24px; background: #d9efe5; color: var(--accent-dark); display: grid; place-items: center; font: 800 1.5rem "Manrope"; margin-bottom: 28px; }
+.hero-card h2 { font-size: 1.65rem; margin-bottom: 4px; letter-spacing: -0.03em; }
+.hero-card > p { color: #c8d4ce; margin-top: 0; }
+.hero-card ul { list-style: none; padding: 22px 0 0; margin: 22px 0 0; border-top: 1px solid rgba(255,255,255,.14); color: #d8e2dd; }
+.hero-card li { margin: 10px 0; }
+.section { padding: 110px 0; }
+.muted-section { background: var(--muted); }
+.two-column { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; }
+.body-copy { color: var(--text); font-size: 1.08rem; }
+.body-copy p:first-child { margin-top: 0; }
+.section-heading { max-width: 760px; margin-bottom: 50px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.project-card { background: white; border: 1px solid var(--line); border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(19,35,29,.045); }
+.project-card.featured { grid-column: 1 / -1; padding: 40px; }
+.project-meta { display: flex; justify-content: space-between; color: var(--accent); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; }
+.project-card h3 { font-size: 1.55rem; margin: 18px 0 12px; }
+.project-card p { color: var(--text); }
+.result { padding-top: 10px; }
+.impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 28px 0; }
+.impact-grid div { background: var(--muted); border-radius: 14px; padding: 18px; }
+.impact-grid strong, .impact-grid span { display: block; }
+.impact-grid strong { font-family: "Manrope"; font-size: 1.1rem; }
+.impact-grid span { color: var(--text); font-size: .85rem; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+.tags span { background: #f1f5f3; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; font-size: .78rem; font-weight: 600; }
+.impact-section { background: var(--ink); color: white; }
+.light .eyebrow { color: #8bd1b5; }
+.metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.metrics-grid div { border-top: 1px solid rgba(255,255,255,.2); padding-top: 22px; }
+.metrics-grid strong, .metrics-grid span { display: block; }
+.metrics-grid strong { font: 700 1.45rem "Manrope"; }
+.metrics-grid span { color: #c9d6d0; margin-top: 8px; }
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.skill-group { padding: 28px; border: 1px solid var(--line); border-radius: 18px; background: white; }
+.skill-group p { color: var(--text); margin-bottom: 0; }
+.experience-wrap { display: grid; grid-template-columns: .65fr 1.35fr; gap: 90px; }
+.compact { margin-bottom: 0; }
+.timeline { border-left: 1px solid #cbd8d1; padding-left: 34px; }
+.timeline article { position: relative; padding: 0 0 42px; }
+.timeline article:last-child { padding-bottom: 0; }
+.timeline-dot { position: absolute; width: 13px; height: 13px; border-radius: 50%; background: var(--accent); left: -41px; top: 7px; box-shadow: 0 0 0 6px var(--muted); }
+.date { color: var(--accent); font-size: .82rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 8px; }
+.timeline h3 { margin-bottom: 8px; }
+.timeline p:last-child { color: var(--text); margin: 0; }
+.contact-section { text-align: center; max-width: 820px; }
+.contact-section p { color: var(--text); font-size: 1.05rem; }
+.contact-actions { justify-content: center; }
+.placeholder-note { font-size: .82rem !important; }
+code { background: var(--muted); padding: 2px 6px; border-radius: 5px; }
+footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--text); font-size: .88rem; }
+.footer-wrap { display: flex; justify-content: space-between; gap: 20px; }
+
+@media (max-width: 850px) {
+  nav { gap: 16px; }
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 40px; padding: 70px 0; }
+  .hero-card { max-width: 500px; }
+  .two-column, .experience-wrap { grid-template-columns: 1fr; gap: 30px; }
+  .project-grid, .skills-grid { grid-template-columns: 1fr; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .container { width: min(calc(100% - 28px), var(--max)); }
+  nav a:nth-child(2), nav a:nth-child(3) { display: none; }
+  h1 { font-size: 2.7rem; }
+  .section { padding: 78px 0; }
+  .quick-facts, .impact-grid, .metrics-grid { grid-template-columns: 1fr; }
+  .project-card.featured, .project-card { padding: 24px; }
+  .footer-wrap { flex-direction: column; }
+}
+
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">AK</span></p>
-<p class="p1"><span class="s1">About</span><span class="s2"> </span><span class="s1">Work</span><span class="s2"> </span><span class="s1">Skills</span><span class="s2"> </span><span class="s1">Contact</span></p>
-<p class="p2"><span class="s3">BUSINESS INTELLIGENCE ENGINEER</span></p>
-<h1 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>I turn complex business questions into trusted, scalable analytics.</b></span></h1>
-<p class="p2"><span class="s3">I’m Akshatha, a Business Intelligence Engineer with 5+ years of experience building data models, executive dashboards, forecasting solutions, and self-service reporting. At AWS, I partner with Finance, Operations, and Sales to make migration performance measurable and actionable.</span></p>
-<p class="p1"><span class="s1">View my work</span><span class="s2"> </span><span class="s1">Get in touch</span></p>
-<p class="p4"><span class="s3"><b>5+ years</b>Analytics experience</span></p>
-<p class="p4"><span class="s3"><b>4 years</b>At AWS</span></p>
-<p class="p4"><span class="s3"><b>97%</b>Refresh-time reduction</span></p>
-<p class="p4"><span class="s3">AK</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Akshatha Chandra Kumar</b></span></h2>
-<p class="p2"><span class="s3">Business Intelligence Engineer</span></p>
-<ul class="ul1">
-  <li class="li4"><span class="s4"></span><span class="s3">Dallas, TX · Open to NYC</span></li>
-  <li class="li4"><span class="s4"></span><span class="s3">SQL · QuickSight · Tableau</span></li>
-  <li class="li4"><span class="s4"></span><span class="s3">Data modeling · Forecasting</span></li>
-</ul>
-<p class="p2"><span class="s3">ABOUT</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Business context first. Data solution second.</b></span></h2>
-<p class="p2"><span class="s3">My strength is solving ambiguous analytics problems by first aligning teams on the business question, metric definition, and decision the data should support. I then translate that into reliable SQL models, intuitive dashboards, and repeatable reporting processes.</span></p>
-<p class="p2"><span class="s3">In my current role, I own analytics across the migration lifecycle, including revenue realization, goal attainment, program health, risk identification, milestone tracking, and forward-looking forecasts. I also support Monthly Business Reviews by turning complex datasets into clear leadership insights.</span></p>
-<p class="p2"><span class="s3">SELECTED WORK</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Projects that improved speed, visibility, and decision-making.</b></span></h2>
-<p class="p4"><span class="s3">Data PlatformAWS</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Migration Success OneView</b></span></h3>
-<p class="p2"><span class="s3">Built and scaled a centralized source of truth for migration revenue tracking, combining program, customer, operational, and financial data into a reusable model with 200+ columns and 50+ business metrics.</span></p>
-<p class="p4"><span class="s3"><b>3 hrs </b></span><span class="s5"><b>→</b></span><span class="s3"><b> 10 mins</b>Dataset refresh</span></p>
-<p class="p4"><span class="s3"><b>3 mins </b></span><span class="s5"><b>→</b></span><span class="s3"><b> &lt;15 sec</b>Dashboard load</span></p>
-<p class="p4"><span class="s3"><b>35K+</b>Viewer sessions</span></p>
-<p class="p4"><span class="s3">SQLRedshiftQuickSightData Modeling</span></p>
-<p class="p4"><span class="s3">Program Analytics</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>MAP Lite Reporting</b></span></h3>
-<p class="p2"><span class="s3">Created end-to-end reporting for a program that lacked a unified analytics solution. Defined KPIs with stakeholders, integrated multiple data sources, and delivered program statistics, revenue, and funding views.</span></p>
-<p class="p2"><span class="s3"><b>Result:</b> Increased reporting frequency from monthly to bi-weekly and improved tracking efficiency by 15%.</span></p>
-<p class="p4"><span class="s3">Metric DesignETLStakeholder Alignment</span></p>
-<p class="p4"><span class="s3">Forecasting</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Revenue Uplift Forecast</b></span></h3>
-<p class="p2"><span class="s3">Developed a blended forecasting approach using historical revenue trends, velocity, acceleration, and Finance benchmarks to project future migration revenue and improve planning visibility.</span></p>
-<p class="p2"><span class="s3"><b>Result:</b> Supported more proactive revenue planning and contributed to a 5% improvement in revenue growth.</span></p>
-<p class="p4"><span class="s3">ForecastingCohort AnalysisFinance Partnership</span></p>
-<p class="p4"><span class="s3">Operational Intelligence</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>At-Risk Migration Logic</b></span></h3>
-<p class="p2"><span class="s3">Partnered with Operations and Finance to define what “at risk” means using revenue trajectory, milestone progress, health status, and execution signals, then surfaced impacted migrations with recommended follow-up actions.</span></p>
-<p class="p2"><span class="s3"><b>Result:</b> Shifted reporting from status visibility to action-oriented portfolio management.</span></p>
-<p class="p4"><span class="s3">Business RulesRisk AnalyticsExecutive Reporting</span></p>
-<p class="p4"><span class="s3">Executive Analytics</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Monthly Business Review Reporting</b></span></h3>
-<p class="p2"><span class="s3">Own recurring leadership reporting across migration performance, goal attainment, revenue trends, milestone completion, blockers, and program health. Translate data into concise narratives and decision-ready insights.</span></p>
-<p class="p2"><span class="s3"><b>Result:</b> Established a trusted cadence for Finance, Operations, Sales, and leadership teams.</span></p>
-<p class="p4"><span class="s3">MBRStorytellingKPI Design</span></p>
-<p class="p2"><span class="s3">IMPACT</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Analytics designed to be used, trusted, and scaled.</b></span></h2>
-<p class="p4"><span class="s3"><b>240 hrs/year</b>Saved through reporting automation</span></p>
-<p class="p4"><span class="s3"><b>20+ hrs/week</b>Saved through process automation</span></p>
-<p class="p4"><span class="s3"><b>50+ metrics</b>Standardized in a central model</span></p>
-<p class="p4"><span class="s3"><b>Cross-functional</b>Finance, Operations, and Sales partnership</span></p>
-<p class="p2"><span class="s3">CAPABILITIES</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Technical depth with strong business partnership.</b></span></h2>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Analytics &amp; Data</b></span></h3>
-<p class="p2"><span class="s3">Advanced SQL, data modeling, ETL, dimensional design, cohort analysis, forecasting, metric definition, data validation, performance optimization</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Tools</b></span></h3>
-<p class="p2"><span class="s3">Amazon Redshift, QuickSight, Tableau, Power BI, Oracle, SQL Server, SSIS, Azure Data Factory, GitHub, Excel</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Business</b></span></h3>
-<p class="p2"><span class="s3">Executive reporting, MBRs, revenue analytics, goal tracking, program health, stakeholder alignment, self-service analytics, requirements gathering</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Working Style</b></span></h3>
-<p class="p2"><span class="s3">Ownership, structured problem solving, trusted partnerships, clear communication, simplifying ambiguity, scalable solutions</span></p>
-<p class="p2"><span class="s3">EXPERIENCE</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Career snapshot</b></span></h2>
-<p class="p6"><span class="s3"></span><br></p>
-<p class="p2"><span class="s3">2022 – Present</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Business Intelligence Engineer · Amazon Web Services</b></span></h3>
-<p class="p2"><span class="s3">Own end-to-end analytics for AWS migration programs, including data models, dashboards, forecasts, and executive reporting.</span></p>
-<p class="p6"><span class="s3"></span><br></p>
-<p class="p2"><span class="s3">Earlier Experience</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Business &amp; Data Analytics Roles</b></span></h3>
-<p class="p2"><span class="s3">Worked across healthcare and cloud technology environments, building reporting automation, data pipelines, and decision-support analytics.</span></p>
-<p class="p6"><span class="s3"></span><br></p>
-<p class="p2"><span class="s3">Education</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Master’s in Management Information Systems</b></span></h3>
-<p class="p2"><span class="s3">Built a foundation in data management, business systems, analytics, and technology strategy.</span></p>
-<p class="p2"><span class="s3">CONTACT</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s3"><b>Interested in analytics that moves a business forward?</b></span></h2>
-<p class="p2"><span class="s3">I’m exploring Business Intelligence, Senior Data Analyst, and Analytics Engineering opportunities, with a preference for New York City.</span></p>
-<p class="p1"><span class="s1"><a href="mailto:1akshathack@gmail.com">Email me</a></span><span class="s2"> <a href="https://www.linkedin.com/in/akshatha-ck/"><span class="s6">LinkedIn</span></a></span></p>
-<p class="p4"><span class="s3">© Akshatha Chandra Kumar Built with clarity and purpose.</span></p>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">AK</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">BUSINESS INTELLIGENCE ENGINEER</p>
+        <h1>I turn complex business questions into trusted, scalable analytics.</h1>
+        <p class="hero-text">
+          I’m Akshatha, a Business Intelligence Engineer with 5+ years of experience building data models, executive dashboards, forecasting solutions, and self-service reporting. At AWS, I partner with Finance, Operations, and Sales to make migration performance measurable and actionable.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">View my work</a>
+          <a class="button secondary" href="#contact">Get in touch</a>
+        </div>
+        <div class="quick-facts" aria-label="Key facts">
+          <div><strong>5+ years</strong><span>Analytics experience</span></div>
+          <div><strong>4 years</strong><span>At AWS</span></div>
+          <div><strong>97%</strong><span>Refresh-time reduction</span></div>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Profile summary">
+        <div class="avatar">AK</div>
+        <h2>Akshatha Chandra Kumar</h2>
+        <p>Business Intelligence Engineer</p>
+        <ul>
+          <li>Dallas, TX · Open to NYC</li>
+          <li>SQL · QuickSight · Tableau</li>
+          <li>Data modeling · Forecasting</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="about" class="section muted-section">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">ABOUT</p>
+          <h2>Business context first. Data solution second.</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            My strength is solving ambiguous analytics problems by first aligning teams on the business question, metric definition, and decision the data should support. I then translate that into reliable SQL models, intuitive dashboards, and repeatable reporting processes.
+          </p>
+          <p>
+            In my current role, I own analytics across the migration lifecycle, including revenue realization, goal attainment, program health, risk identification, milestone tracking, and forward-looking forecasts. I also support Monthly Business Reviews by turning complex datasets into clear leadership insights.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects that improved speed, visibility, and decision-making.</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-meta"><span>Data Platform</span><span>AWS</span></div>
+          <h3>Migration Success OneView</h3>
+          <p>
+            Built and scaled a centralized source of truth for migration revenue tracking, combining program, customer, operational, and financial data into a reusable model with 200+ columns and 50+ business metrics.
+          </p>
+          <div class="impact-grid">
+            <div><strong>3 hrs → 10 mins</strong><span>Dataset refresh</span></div>
+            <div><strong>3 mins → &lt;15 sec</strong><span>Dashboard load</span></div>
+            <div><strong>35K+</strong><span>Viewer sessions</span></div>
+          </div>
+          <div class="tags"><span>SQL</span><span>Redshift</span><span>QuickSight</span><span>Data Modeling</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span>Program Analytics</span></div>
+          <h3>MAP Lite Reporting</h3>
+          <p>
+            Created end-to-end reporting for a program that lacked a unified analytics solution. Defined KPIs with stakeholders, integrated multiple data sources, and delivered program statistics, revenue, and funding views.
+          </p>
+          <p class="result"><strong>Result:</strong> Increased reporting frequency from monthly to bi-weekly and improved tracking efficiency by 15%.</p>
+          <div class="tags"><span>Metric Design</span><span>ETL</span><span>Stakeholder Alignment</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span>Forecasting</span></div>
+          <h3>Revenue Uplift Forecast</h3>
+          <p>
+            Developed a blended forecasting approach using historical revenue trends, velocity, acceleration, and Finance benchmarks to project future migration revenue and improve planning visibility.
+          </p>
+          <p class="result"><strong>Result:</strong> Supported more proactive revenue planning and contributed to a 5% improvement in revenue growth.</p>
+          <div class="tags"><span>Forecasting</span><span>Cohort Analysis</span><span>Finance Partnership</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span>Operational Intelligence</span></div>
+          <h3>At-Risk Migration Logic</h3>
+          <p>
+            Partnered with Operations and Finance to define what “at risk” means using revenue trajectory, milestone progress, health status, and execution signals, then surfaced impacted migrations with recommended follow-up actions.
+          </p>
+          <p class="result"><strong>Result:</strong> Shifted reporting from status visibility to action-oriented portfolio management.</p>
+          <div class="tags"><span>Business Rules</span><span>Risk Analytics</span><span>Executive Reporting</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span>Executive Analytics</span></div>
+          <h3>Monthly Business Review Reporting</h3>
+          <p>
+            Own recurring leadership reporting across migration performance, goal attainment, revenue trends, milestone completion, blockers, and program health. Translate data into concise narratives and decision-ready insights.
+          </p>
+          <p class="result"><strong>Result:</strong> Established a trusted cadence for Finance, Operations, Sales, and leadership teams.</p>
+          <div class="tags"><span>MBR</span><span>Storytelling</span><span>KPI Design</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section impact-section">
+      <div class="container">
+        <div class="section-heading light">
+          <p class="eyebrow">IMPACT</p>
+          <h2>Analytics designed to be used, trusted, and scaled.</h2>
+        </div>
+        <div class="metrics-grid">
+          <div><strong>240 hrs/year</strong><span>Saved through reporting automation</span></div>
+          <div><strong>20+ hrs/week</strong><span>Saved through process automation</span></div>
+          <div><strong>50+ metrics</strong><span>Standardized in a central model</span></div>
+          <div><strong>Cross-functional</strong><span>Finance, Operations, and Sales partnership</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">CAPABILITIES</p>
+        <h2>Technical depth with strong business partnership.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Analytics & Data</h3>
+          <p>Advanced SQL, data modeling, ETL, dimensional design, cohort analysis, forecasting, metric definition, data validation, performance optimization</p>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <p>Amazon Redshift, QuickSight, Tableau, Power BI, Oracle, SQL Server, SSIS, Azure Data Factory, GitHub, Excel</p>
+        </div>
+        <div class="skill-group">
+          <h3>Business</h3>
+          <p>Executive reporting, MBRs, revenue analytics, goal tracking, program health, stakeholder alignment, self-service analytics, requirements gathering</p>
+        </div>
+        <div class="skill-group">
+          <h3>Working Style</h3>
+          <p>Ownership, structured problem solving, trusted partnerships, clear communication, simplifying ambiguity, scalable solutions</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container experience-wrap">
+        <div class="section-heading compact">
+          <p class="eyebrow">EXPERIENCE</p>
+          <h2>Career snapshot</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <div class="timeline-dot"></div>
+            <div>
+              <p class="date">2022 – Present</p>
+              <h3>Business Intelligence Engineer · Amazon Web Services</h3>
+              <p>Own end-to-end analytics for AWS migration programs, including data models, dashboards, forecasts, and executive reporting.</p>
+            </div>
+          </article>
+          <article>
+            <div class="timeline-dot"></div>
+            <div>
+              <p class="date">Earlier Experience</p>
+              <h3>Business & Data Analytics Roles</h3>
+              <p>Worked across healthcare and cloud technology environments, building reporting automation, data pipelines, and decision-support analytics.</p>
+            </div>
+          </article>
+          <article>
+            <div class="timeline-dot"></div>
+            <div>
+              <p class="date">Education</p>
+              <h3>Master’s in Management Information Systems</h3>
+              <p>Built a foundation in data management, business systems, analytics, and technology strategy.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container contact-section">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Interested in analytics that moves a business forward?</h2>
+      <p>I’m exploring Business Intelligence, Senior Data Analyst, and Analytics Engineering opportunities, with a preference for New York City.</p>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:1akshathack@gmail.com">Email me</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/akshatha-ck/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <p class="placeholder-note">Replace the email and LinkedIn links in <code>index.html</code> with your details.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> Akshatha Chandra Kumar</span>
+      <span>Built with clarity and purpose.</span>
+    </div>
+  </footer>
+
+  <script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
 </body>
 </html>
